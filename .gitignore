@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Sequelize CLI files (if you want to ignore local config)
+config/config.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+build/
+
+# Docker
+*.dockerfile
+docker-compose.override.yml
+
+# VSCode
+.vscode/
+
+# Misc
+.idea/
+*.swp
