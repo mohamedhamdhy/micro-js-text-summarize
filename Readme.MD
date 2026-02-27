@@ -130,6 +130,7 @@ Server will be running at **http://localhost:5000**
 ### Auth
 
 POST | `/api/auth/register
+
 POST | `/api/auth/login
 
 ### Analysis
