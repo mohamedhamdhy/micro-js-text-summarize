@@ -15,10 +15,15 @@ User.init(
     sequelize,
     modelName: "User",
     tableName: "users",
-    timestamps: false,
+    timestamps: true,
     hooks: {
       beforeCreate: async (user) => {
         user.password = await bcrypt.hash(user.password, 10);
+      },
+      beforeUpdate: async (user) => {
+        if (user.changed("password")) {
+          user.password = await bcrypt.hash(user.password, 10);
+        }
       },
     },
   },
